@@ -8,6 +8,7 @@ import {
 } from "@material-ui/core";
 import SortIcon from "@material-ui/icons/Sort";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import { Link as Scroll } from "react-scroll";
 
 function Header() {
   const classes = useStyles();
@@ -19,9 +20,9 @@ function Header() {
   }, []);
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="header">
       <AppBar className={classes.appbar} elevation={0}>
-        <Toolbar classname={classes.appbarWrapper}>
+        <Toolbar className={classes.appbarWrapper}>
           <h1 className={classes.appbarTitle}>
             My <span className={classes.colorText}>Island</span>
           </h1>
@@ -40,9 +41,11 @@ function Header() {
             Welcome to <br /> My{" "}
             <span className={classes.colorText}>Island</span>
           </h1>
-          <IconButton className={classes.icon}>
-            <ExpandMoreIcon className={classes.goDown} />
-          </IconButton>
+          <Scroll to="place-to-visit" smooth={true}>
+            <IconButton className={classes.icon}>
+              <ExpandMoreIcon className={classes.goDown} />
+            </IconButton>
+          </Scroll>
         </div>
       </Collapse>
     </div>

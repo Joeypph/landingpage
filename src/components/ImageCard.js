@@ -9,12 +9,12 @@ import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    maxWidth: 645,
     background: "rgba(0,0,0,0.5)",
     margin: "20px",
   },
   media: {
-    height: 445,
+    height: 440,
   },
   title: {
     fontFamily: "Nunito",
