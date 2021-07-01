@@ -8,12 +8,16 @@ import {
 } from "@material-ui/core";
 import SortIcon from "@material-ui/icons/Sort";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+
 function Header() {
   const classes = useStyles();
+
   const [checked, setChecked] = useState(false);
+
   useEffect(() => {
     setChecked(true);
   }, []);
+
   return (
     <div className={classes.root}>
       <AppBar className={classes.appbar} elevation={0}>
